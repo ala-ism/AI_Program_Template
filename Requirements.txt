@@ -9,5 +9,5 @@ spacy
 statistics
 datetime
 matplotlib
-xlrt
-xlwd
+xlrd
+xlwt
