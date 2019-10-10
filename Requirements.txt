@@ -2,10 +2,12 @@ pandas
 numpy 
 xgboost
 scikit-learn
-sklear
+sklearn
 nltk
 unicodedata
 spacy
 statistics
 datetime
 matplotlib
+xlrt
+xlwd
