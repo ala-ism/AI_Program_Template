@@ -1,1 +1,1 @@
-pandas
+Notes specifying the technical choices you made, and the potential shifts you implemented in your models or data processing approaches
