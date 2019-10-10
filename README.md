@@ -1,11 +1,11 @@
 # AI_Program_Template
 
-## Objective/Business stakes
-## Stack 
-## Prerequisites
-## Methodology
-## Structure of the repository
-## Results and next steps
-## Key takeaways 
-## Remarks
-## Bibliography 
+## 1- Objective/Business stakes
+## 2- Stack 
+## 3- Prerequisites
+## 4- Methodology
+## 5- Structure of the repository
+## 6- Results and next steps
+## 7- Key takeaways 
+## 8- Remarks
+## 9- Bibliography 
