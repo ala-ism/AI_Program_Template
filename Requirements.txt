@@ -1,1 +1,11 @@
 pandas
+numpy 
+xgboost
+scikit-learn
+sklear
+nltk
+unicodedata
+spacy
+statistics
+datetime
+matplotlib
