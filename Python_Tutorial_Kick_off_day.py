@@ -13,6 +13,8 @@ sns.set(color_codes=True)
 
 import os
 
+
+
 get_ipython().run_line_magic('matplotlib', 'inline')
 get_ipython().run_line_magic('pylab', 'inline')
 
@@ -53,6 +55,7 @@ df.info()
 
 # In[8]:
 
+print("try commit Arnaud")
 
 df['tree'].unique()
 
