@@ -47,7 +47,7 @@ df.shape
 
 # In[7]:
 
-
+print("try commit cORENTIN")
 df.info()
 
 
