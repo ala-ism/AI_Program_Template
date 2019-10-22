@@ -15,8 +15,8 @@ import os
 
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
-get_ipython().run_line_magic('pylab', 'inline')
+# get_ipython().run_line_magic('matplotlib', 'inline')
+# get_ipython().run_line_magic('pylab', 'inline')
 
 
 # In[34]:
@@ -36,12 +36,6 @@ if 'Id' in df.columns:
 
 df.head()
 
-# In[]:
-
-print("test")
-print("test 3")
-
-print("test 4")
 # In[6]:
 
 
@@ -51,17 +45,12 @@ df.shape
 
 # In[7]:
 
-print("try commit cORENTIN")
 df.info()
 
 
 # In[8]:
 
-print("try commit Arnaud")
-
 df['tree'].unique()
-
-print("test test")
 
 # In[9]:
 
