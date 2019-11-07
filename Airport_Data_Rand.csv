@@ -1,4 +1,4 @@
-year,month,day,week,temp_2,temp_1,average,actual,forecast_noaa,forecast_acc,forecast_under,friend
+year,month,day,week,temp_2,temp_1,average,actual,forecast_meth_2,forecast_meth_1,forecast_under,love_coef
 2016,1,1,Fri,45,45,45.6,45,43,50,44,29
 2016,1,2,Sat,44,45,45.7,44,41,50,44,61
 2016,1,3,Sun,45,44,45.8,41,43,46,47,56
