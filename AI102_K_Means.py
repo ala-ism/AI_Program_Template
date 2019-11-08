@@ -10,6 +10,7 @@ vectorized = img.reshape((-1,3))
 vectorized = np.float32(vectorized)
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
 #%%
+#try playing with the K parameter and see what happens (e.g., K=2, K=3)
 K = 15
 attempts=10
 ret,label,center=cv2.kmeans(vectorized,K,None,criteria,attempts,cv2.KMEANS_PP_CENTERS)
