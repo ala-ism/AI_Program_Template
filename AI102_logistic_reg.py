@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 
 # In[3]:
 
-url= "https://raw.githubusercontent.com/ala-ism/AI_Program_Template/master/Sprink_data.csv"
+url= "https://raw.githubusercontent.com/ala-ism/AI_Program_Template/master/Sprink_Data.csv"
 df = pd.read_excel(url)
 
 
