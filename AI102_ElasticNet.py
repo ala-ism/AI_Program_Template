@@ -1,7 +1,7 @@
 #%%
 from matplotlib import pyplot as plt
 import numpy as np
-from sklearn.linear_model import Ridge
+from sklearn.linear_model import ElasticNet
 import pandas as pd
 #%%
 ##Deal with the data first and make sure our variables contain the right (type) of data
@@ -20,13 +20,14 @@ X=df[["stand","runway"]]
 y=df[["taxi-in"]]
 #%%
 ##Set the value of our Penalization parameter
-alpha=1
+alpha=1 #alpha=a+b
+l1_ratio=0.5 #l1_ratio=a/(a+b)
 #%%
 ##Initialize our Ridge regression
-Penalized_regression=Ridge(alpha=alpha)
+Penalized_regression=ElasticNet(alpha=alpha, l1_ratio=l1_ratio)
 #%%
 ##Train the model
 Penalized_regression.fit(X,y)
 coeffiscients=Penalized_regression.coef_[0]
 #%%
-coeffiscients[0]
+coeffiscients
