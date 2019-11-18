@@ -20,9 +20,8 @@ url= "https://raw.githubusercontent.com/ala-ism/AI_Program_Template/master/Sprin
 df_spk = pd.read_csv(url, sep='\t')
 #%%
 df_spk=df_spk[["Position X", "Position Y", "Zone"]]
-df_spk.to_csv(r'C:/Users/Ismaïl/Desktop/test.csv', sep='\t', encoding='utf-8')
-#x=df_spk[['Position X','Position Y']].values
-#y=df_spk['Zone'].values
+x=df_spk[['Position X','Position Y']].values
+y=df_spk['Zone'].values
 
 # In[17]:
 df_spk.groupby("Zone").head()
