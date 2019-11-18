@@ -14,16 +14,19 @@ from sklearn.model_selection import train_test_split
 
 
 # In[3]:
+#Let's import hour
 
-url= "https://raw.githubusercontent.com/ala-ism/AI_Program_Template/master/Sprinklers.csv"
-df = pd.read_csv(url, sep='\t')
+url= "https://raw.githubusercontent.com/ala-ism/AI_Program_Template/master/Sprinklers_Dataset.csv"
+df_spk = pd.read_csv(url, sep='\t')
 #%%
-x=df_spk[['Position X','Position Y']].values
-y=df_spk['Zone'].values
-df_spk.to_csv("file.csv",sep="\t",encoding='utf-8')
+df_spk=df_spk[["Position X", "Position Y", "Zone"]]
+df_spk.to_csv(r'C:/Users/Ismaïl/Desktop/test.csv', sep='\t', encoding='utf-8')
+#x=df_spk[['Position X','Position Y']].values
+#y=df_spk['Zone'].values
 
 # In[17]:
-
+df_spk.groupby("Zone").head()
+#%%
 
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.7, random_state=0)
 
