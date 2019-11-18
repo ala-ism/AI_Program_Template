@@ -15,16 +15,16 @@ from sklearn import datasets
 from sklearn import datasets
 iris = datasets.load_iris()
 df = pd.DataFrame(data= np.c_[iris.data[:, :2], iris['target']],
-                     columns= ['Grip', 'Roughness', 'Surface_type'])
+                     columns= ['Position X', 'Position Y', 'Zone'])
 
-df.Surface_type = df.Surface_type.map({0:'Concrete', 1:'Asphalt Old', 2:'Asphalt New'})
+df.Surface_type = df.Surface_type.map({0:'Favo', 1:'Standard', 2:'Defavo'})
 
 df.head()
 
 #%% 
 
-X = df[['Grip', 'Roughness']].values  # we only take the first two features.
-y = df['Surface_type'].values
+X = df[['Position X', 'Position Y']].values  # we only take the first two features.
+y = df['Zone'].values
 
 
 #%%
