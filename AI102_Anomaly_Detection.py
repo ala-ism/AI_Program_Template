@@ -39,3 +39,19 @@ for data, color, group in zip(data, colors, groups):
 plt.title('outlier detection result')
 plt.legend(loc=2)
 plt.show()
+
+# Isolation Forest ----
+
+# training the model
+clf = IsolationForest(max_samples=100, random_state=rng)
+clf.fit(X_train)
+
+# predictions
+y_pred_train = clf.predict(X_train)
+y_pred_test = clf.predict(X_test)
+y_pred_outliers = clf.predict(X_outliers)
+
+
+print("Accuracy:", list(y_pred_test).count(1)/y_pred_test.shape[0])
+
+print("Accuracy:", list(y_pred_outliers).count(-1)/y_pred_outliers.shape[0])
