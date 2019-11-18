@@ -11,20 +11,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 from sklearn import datasets
 
-#%% Import data & preprocessing
-from sklearn import datasets
-iris = datasets.load_iris()
-df = pd.DataFrame(data= np.c_[iris.data[:, :2], iris['target']],
-                     columns= ['Grip', 'Roughness', 'Surface_type'])
 
-df.Surface_type = df.Surface_type.map({0:'Concrete', 1:'Asphalt Old', 2:'Asphalt New'})
-
+#%% #%% Import data & preprocessing
+df = pd.read_csv('Sprinkler_data.csv')
+df = df[['Height', 'Flow', 'Distance_water_source_x', 'Distance_water_source_y', 'Zone']]
 df.head()
 
-#%% 
-
-X = df[['Grip', 'Roughness']].values  # we only take the first two features.
-y = df['Surface_type'].values
+#%% Create input & output tables
+X = df[['Distance_water_source_x', 'Distance_water_source_y']].values  # we only take the first two features.
+y = df['Zone'].values
 
 
 #%%
