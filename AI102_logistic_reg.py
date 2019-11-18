@@ -19,7 +19,6 @@ from sklearn.model_selection import train_test_split
 url= "https://raw.githubusercontent.com/ala-ism/AI_Program_Template/master/Sprinklers_Dataset.csv"
 df_spk = pd.read_csv(url, sep='\t')
 #%%
-df_spk=df_spk[["Position X", "Position Y", "Zone"]]
 x=df_spk[['Position X','Position Y']].values
 y=df_spk['Zone'].values
 
