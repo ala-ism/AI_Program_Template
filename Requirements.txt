@@ -12,3 +12,8 @@ datetime
 matplotlib
 xlrd
 xlwt
+keras
+mnist
+pylab
+opencv-python
+networkx
