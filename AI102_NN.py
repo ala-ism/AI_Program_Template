@@ -5,11 +5,24 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.utils import to_categorical
+import cv2
 # %%
 train_images= mnist.train_images()
 train_labels=mnist.train_labels()
 test_images=mnist.test_images()
 test_labels=mnist.test_labels()
+
+#%%
+# test_images: let's take a look at some of our test images
+for i in range(10):
+  pixels=test_images[i,:,:]
+ 
+  title = 'Test image example'
+  cv2.imshow(title,pixels)
+  cv2.waitKey(0)
+  cv2.destroyAllWindows()
+
+
 # %%
 #normalizing the images
 train_images=(train_images/255) -0.5
@@ -18,7 +31,7 @@ test_images=(test_images/255)-0.5
 #%%
 #flattening the images
 train_images=train_images.reshape((-1,784))
-test_images=test_images.reshape((-1,784))
+test_images=test_imwages.reshape((-1,784))
 print(train_images.shape)
 print(test_images.shape)
 
