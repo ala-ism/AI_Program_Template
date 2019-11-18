@@ -15,9 +15,7 @@ fig = go.Figure(data=go.Scattergl(
         opacity = 1
     )
 ))
-
 fig.show()
-
 # %% SCATTERPLOT MATRIX
 import seaborn as sns
 sns.set(style="ticks")
@@ -335,7 +333,7 @@ uniform_data = np.random.rand(10, 12)
 ax = sns.heatmap(uniform_data)
 
 #%%
-#parallel plot
+#Parallel plot
 import plotly.express as px
 iris = px.data.iris()
 fig = px.parallel_coordinates(iris, color="species_id", labels={"species_id": "Species",
