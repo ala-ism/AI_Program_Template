@@ -13,7 +13,7 @@ from sklearn import datasets
 
 
 #%% #%% Import data & preprocessing
-df = pd.read_csv('Sprinkler_data.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/ala-ism/AI_Program_Template/master/Sprinkler_data.csv')
 df = df[['Height', 'Flow', 'Distance_water_source_x', 'Distance_water_source_y', 'Zone']]
 df.head()
 
