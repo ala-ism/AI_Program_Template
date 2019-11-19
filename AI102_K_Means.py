@@ -56,7 +56,7 @@ fig.show()
 #2nd Example with image
 
 
-img=cv2.imread(r"C:/Users/test.jpg")
+img=cv2.imread(r"C:/Users/K_Means_Picture.jpg")
 img=cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 print(img.shape)
 
