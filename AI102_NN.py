@@ -1,5 +1,5 @@
 #%%
-import numpy as numpy
+import numpy as np
 import mnist
 import keras
 from keras.models import Sequential
