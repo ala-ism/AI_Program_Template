@@ -3,8 +3,59 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import cv2
 import numpy as np
+import pandas as pd
+from sklearn.cluster import KMeans
+import plotly.express as px
+
 
 #%%
+dataset = pd.read_csv('Sprinkler_data.csv',index_col=0)
+dataset.head()
+
+#%%
+#We remove the column 'Zone' which is the column we are trying to predict
+dataset.drop(['Zone'],axis=1,inplace=True)
+dataset.head()
+
+#%%
+#We start by implementing 'The elbow method' on our dataset. 
+#The elbow method allows us to pick the optimum number of clusters for classificationby visualizing the error for each number of cluster
+wcss = []
+
+for i in range(1, 11):
+    kmeans = KMeans(n_clusters = i, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
+    kmeans.fit(dataset)
+    wcss.append(kmeans.inertia_)
+    
+#Plotting the results onto a line graph, allowing us to observe 'The elbow'
+plt.plot(range(1, 11), wcss)
+plt.title('The elbow method')
+plt.xlabel('Number of clusters')
+plt.ylabel('WCSS') #within cluster sum of squares
+plt.show()
+
+#%%
+#Creating the kmeans classifier see documentation : https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+#Change the parameters to see how it changes the clusters (change the visualization too)
+
+kmeans = KMeans(n_clusters = 3, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
+dataset['prediction'] = kmeans.fit_predict(dataset)
+dataset.head()
+
+#%%
+#Visualising the clusters
+
+fig = px.scatter_3d(dataset, x='Height', y='Flow', z='Distance_water_source_x',
+              color='prediction')
+fig.show()
+
+
+
+
+#%%
+#2nd Example with image
+
+
 img=cv2.imread(r"C:/Users/test.jpg")
 img=cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 print(img.shape)
