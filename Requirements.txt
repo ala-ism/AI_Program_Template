@@ -17,3 +17,4 @@ mnist
 pylab
 opencv-python
 networkx
+plotly.express
