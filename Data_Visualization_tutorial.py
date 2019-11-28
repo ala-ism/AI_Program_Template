@@ -161,9 +161,10 @@ show()
 import plotly.express as px
 gapminder = px.data.gapminder()
 fig = px.area(gapminder, x="year", y="pop", color="continent",
-	      line_group="country")
+	      line_group="pop")
 fig.show()
-
+#%%
+gapminder
 #%%
 #Mekko chart
 import pandas as pd
@@ -175,7 +176,7 @@ rand = np.random.random
 speaks_mul_foreign_languages = list(product(['male', 'female'], ['yes', 'no']))
 index = pd.MultiIndex.from_tuples(speaks_mul_foreign_languages, names=['male', 'female'])
 data = pd.Series(rand(4), index=index)
-mosaic(data, gap=0.01, title='Who knows multiple foregin languages? - Mosaic Chart')
+mosaic(data, gap=0.01, title='Who knows multiple foreign languages? - Mosaic Chart')
 pylab.show()
 
 #%%
