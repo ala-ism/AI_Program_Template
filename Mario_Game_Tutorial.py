@@ -128,10 +128,12 @@ for episode in range(NB_EPISODES):
             action = np.argmax(q_table[obs])
         else:
             action = np.random.randint(0, 6)
-        # Take the action!
+
         Mario.action(action)
         Goomba.move()
-        #food.move()
+
+        if Goomba.x in Level.holes:
+            Goomba=Blob(Level.enemies[0])
 
         if Mario.x == Goomba.x:
             reward = -ENEMY_PENALTY
